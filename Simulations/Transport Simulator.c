@@ -2524,7 +2524,7 @@ int cplanehandling(void) {
               nthetahat = ntheta/(ntheta*ntheta+nphi*nphi);                         //Calculating the components of the normal unit vector
               nphihat = nphi/(ntheta*ntheta+nphi*nphi);
               nxhat = 1/(ntheta*ntheta+nphi*nphi);
-              vimag = sqrt(pow(neutron.vx,2)+pow(neutron.vy,2)+pow(neutron.vz,2);    //Calculating the initial velocity vector's magnitude
+              vimag = sqrt(pow(neutron.vx,2)+pow(neutron.vy,2)+pow(neutron.vz,2));    //Calculating the initial velocity vector's magnitude
               vparix = pow(neutron.vx,2)*nxhat/vimag;               //Calculating the x,y,z components of the initial velocity
               vpariy = pow(neutron.vy,2)*nthetahat/vimag;          //vector's component parallel to the scattering angle
               vpariz = pow(neutron.vz,2)*nphihat/vimag;
@@ -2532,7 +2532,7 @@ int cplanehandling(void) {
               vperpz=neutron.vz-vpariz;           //vector's component perpendicular to the scattering angle
               vperpz=neutron.vz-vpariz;
               vparmagi=sqrt(pow(vparix,2)+pow(vpariy,2)+pow(vpariz,2));  //Finding the magnitude of the initial parallel vector
-              vparmagf=sqrt(pow(vparmagi,2)+vboostmag(pow,2));          //Calculating the magnitude of the final parallel vector
+              vparmagf=sqrt(pow(vparmagi,2)+pow(vboostmag,2));          //Calculating the magnitude of the final parallel vector
               vparfx=vparmagf*nxhat;                                   //and finding its x,y,z components by adding the Fermi Potential
               vparfy=vparmagf*nthetahat;                              //then multiplying the final magnitude by the components of the
               vparfz=vparmagf*nphihat;                               //scattering unit vector.
